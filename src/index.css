@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* StockSage AI Design System - Modern Finance Platform
+   Inspired by Apple Finance, Linear, and Scale */
+
+@layer base {
+  :root {
+    /* Core surfaces */
+    --background: 210 20% 99%;
+    --foreground: 222 47% 11%;
+    
+    /* Cards with subtle warmth */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* Primary: Deep slate-blue for authority and trust */
+    --primary: 222 47% 11%;
+    --primary-foreground: 210 40% 98%;
+    
+    /* Secondary: Soft neutral */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+    
+    /* Muted tones */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    
+    /* Accent: Subtle blue-gray */
+    --accent: 220 14% 96%;
+    --accent-foreground: 222 47% 11%;
+    
+    /* Semantic colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Market colors - The soul of a finance app */
+    --gain: 142 76% 36%;
+    --gain-foreground: 0 0% 100%;
+    --gain-muted: 142 76% 95%;
+    
+    --loss: 0 84% 60%;
+    --loss-foreground: 0 0% 100%;
+    --loss-muted: 0 84% 97%;
+    
+    --neutral: 220 9% 46%;
+    --neutral-muted: 220 14% 96%;
+    
+    /* Sentiment colors */
+    --bullish: 142 76% 36%;
+    --bearish: 0 84% 60%;
+    --neutral-sentiment: 45 93% 47%;
+    
+    /* UI elements */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 222 47% 11%;
+    
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(222 47% 11%) 0%, hsl(220 30% 20%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 14% 99%) 100%);
+    --gradient-gain: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(142 70% 45%) 100%);
+    --gradient-loss: linear-gradient(135deg, hsl(0 84% 60%) 0%, hsl(0 75% 65%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 13% 91% / 0.5);
+    --shadow-md: 0 4px 6px -1px hsl(220 13% 91% / 0.3), 0 2px 4px -2px hsl(220 13% 91% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(220 13% 91% / 0.4), 0 4px 6px -4px hsl(220 13% 91% / 0.3);
+    --shadow-xl: 0 20px 25px -5px hsl(220 13% 91% / 0.3), 0 8px 10px -6px hsl(220 13% 91% / 0.3);
+    --shadow-card: 0 1px 3px 0 hsl(220 13% 91% / 0.3), 0 1px 2px -1px hsl(220 13% 91% / 0.3);
+    --shadow-elevated: 0 25px 50px -12px hsl(222 47% 11% / 0.15);
+    
+    /* Sidebar */
+    --sidebar-background: 220 14% 98%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 222 47% 11%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 222 47% 11%;
+    
+    /* Chart colors */
+    --chart-1: 222 47% 11%;
+    --chart-2: 142 76% 36%;
+    --chart-3: 0 84% 60%;
+    --chart-4: 220 70% 50%;
+    --chart-5: 45 93% 47%;
+  }
+
+  .dark {
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+    
+    --card: 222 47% 7%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 222 47% 7%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
+    
+    --secondary: 220 20% 15%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 15% 60%;
+    
+    --accent: 220 20% 15%;
+    --accent-foreground: 210 40% 98%;
+    
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --gain: 142 70% 45%;
+    --gain-muted: 142 70% 15%;
+    
+    --loss: 0 75% 55%;
+    --loss-muted: 0 75% 15%;
+    
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 210 40% 80%;
+    
+    --sidebar-background: 222 47% 7%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 220 70% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 220 70% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  /* Hero section gradient background */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  /* Card with elegant shadow */
+  .card-elevated {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+    @apply border border-border/50;
+  }
+  
+  /* Market data styling */
+  .price-gain {
+    @apply text-gain font-medium;
+  }
+  
+  .price-loss {
+    @apply text-loss font-medium;
+  }
+  
+  /* Subtle glass effect */
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20;
+  }
+  
+  /* Animated gradient border */
+  .gradient-border {
+    position: relative;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--gain)) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+  
+  /* Ticker badge */
+  .ticker-badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-md bg-secondary text-secondary-foreground font-mono text-sm font-medium;
+  }
+  
+  /* Sentiment badges */
+  .sentiment-bullish {
+    @apply bg-gain-muted text-gain;
+  }
+  
+  .sentiment-bearish {
+    @apply bg-loss-muted text-loss;
+  }
+  
+  .sentiment-neutral {
+    @apply bg-neutral-muted text-neutral;
+  }
+  
+  /* Smooth page transitions */
+  .page-transition {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  /* Focus ring styling */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+}
